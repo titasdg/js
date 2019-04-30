@@ -1,0 +1,42 @@
+body{
+    margin: 0 auto;
+    width:80%;
+   background-color: beige;
+}
+body h1 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+.container{
+    background-color: beige;
+}
+.product{
+    display: inline-block;
+    border:2px solid;
+    border-radius:5%;
+    width: 30%;
+    margin:15px 15px;
+    background-color: blanchedalmond;
+}
+.product img {
+    margin: 0 auto;
+}
+.product h1,p {
+    text-align: center;
+
+}
+.product p {
+    overflow: hidden;
+    max-height: 40px;
+}
+.product h1{
+    height: 80px;
+    vertical-align: center;
+}
+.product button{
+    margin-left:38%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
