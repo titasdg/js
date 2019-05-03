@@ -1,14 +1,42 @@
 
+function Application(){
 
+
+
+    this.getProducts = function (){
+
+        var startAjax = new XMLHttpRequest();
+
+        startAjax.onload = function(){
+            if (startAjax.readyState === 4)
+            {
+                var array = JSON.parse(startAjax.responseText);
+                var arr = Object.values(array);
+             
+                     return arr; 
+               
+                             
+            }
+        }
+        startAjax.open('GET', 'products.json');
+        startAjax.send();
+    
+        
+    }
+
+
+
+}
+
+/************************************************************************************ */
 var startAjax =new XMLHttpRequest();
-
-const row = document.querySelector('.row');
 
 startAjax.onreadystatechange = function(){
     if (startAjax.readyState === 4)
     {
         var array = JSON.parse(startAjax.responseText);
         var arr = Object.values(array);
+        
         var product = '<div>';
         for (let info of arr)
         {
@@ -127,9 +155,6 @@ function removeFromCart(e){
 
          document.querySelector('.cart').click(); 
 }
-
-
-
 
 document.querySelector('.cart').onclick = function () {
 cartAjax.open('GET', 'products.json');
