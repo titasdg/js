@@ -21,12 +21,17 @@
 
     <script src="js/main.js"></script>
  <script>
-var product = new Application();
- setTimeout(function(){ 
- 
- console.log(product.getProducts());
-}, 5000);
- 
+var product = new Application('products.json');
+
+product.getProducts().then(function (response) {
+    console.log("Success!");
+   product.displayProducts(response);
+
+   document.querySelector('.cart').onclick = function () {
+    product.displayCart(response);
+}
+
+})
  
  </script>
   </body>
